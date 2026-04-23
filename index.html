@@ -199,7 +199,7 @@
 
 
     <section class="hero" id="personaje">
-      <img src="https://picsum.photos/seed/zara/120/120" class="avatar">
+      <img src="https://picsum.photos/seed/zara/120/120" class="avatar" alt="Retrato de Zara Darkbane">
 
       <div class="hero-text">
         <h1 class="hero-title" style="font-size: 2.5rem; font-weight: bold; color: #e94560;">
@@ -237,25 +237,28 @@
       <div class="stats-grid">
 
         <article class="stat-card">
-          <img src="https://picsum.photos/seed/heart/40/40" style="width: 40px; border-radius: 50%;">
+          <img src="https://picsum.photos/seed/heart/40/40" alt="Icono de vida"
+            style="width: 40px; border-radius: 50%;">
           <p class="stat-value">80</p>
           <p class="stat-label">Vida</p>
         </article>
 
         <article class="stat-card">
-          <img src="https://picsum.photos/seed/mana/40/40" style="width: 40px; border-radius: 50%;">
+          <img src="https://picsum.photos/seed/mana/40/40" alt="Icono de mana" style="width: 40px; border-radius: 50%;">
           <p class="stat-value">120</p>
           <p class="stat-label">Mana</p>
         </article>
 
         <article class="stat-card">
-          <img src="https://picsum.photos/seed/sword/40/40" style="width: 40px; border-radius: 50%;">
+          <img src="https://picsum.photos/seed/sword/40/40" alt="Icono de ataque"
+            style="width: 40px; border-radius: 50%;">
           <p class="stat-value">45</p>
           <p class="stat-label">Ataque</p>
         </article>
 
         <article class="stat-card">
-          <img src="https://picsum.photos/seed/shield/40/40" style="width: 40px; border-radius: 50%;">
+          <img src="https://picsum.photos/seed/shield/40/40" alt="Icono de defensa"
+            style="width: 40px; border-radius: 50%;">
           <p class="stat-value">30</p>
           <p class="stat-label">Defensa</p>
         </article>
@@ -332,8 +335,13 @@
       </p>
 
       <form id="challenge-form">
+        <label for="challenger-name">Nombre del personaje</label>
         <input type="text" id="challenger-name" placeholder="Nombre de tu personaje">
+
+        <label for="challenger-class">Clase del personaje</label>
         <input type="text" id="challenger-class" placeholder="Clase (Guerrero, Arquero, Paladin...)">
+
+        <label for="challenger-level">Nivel del personaje</label>
         <select id="challenger-level">
           <option value="">Seleccioná tu nivel</option>
           <option value="1">Nivel 1 – 3</option>
@@ -342,7 +350,7 @@
           <option value="10">Nivel 10+</option>
         </select>
 
-        <div class="btn" id="submit-btn">Inscribirme al torneo</div>
+        <button type="submit" class="btn" id="submit-btn">Inscribirme al torneo</button>
       </form>
     </section>
 
