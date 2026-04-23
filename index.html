@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- Error: falta atributo lang -->
-<html>
+
+<html lang="es">
+
 <head>
-  <!-- Error: falta meta viewport (sitio no es responsive) -->
-  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zara Darkbane — Chronicles of Code</title>
 
   <!-- Error: estilos embebidos en lugar de archivo externo -->
@@ -145,7 +145,8 @@
     }
 
     /* Error: campos sin estilos accesibles, sin indicador de foco visible */
-    input, select {
+    input,
+    select {
       display: block;
       width: 100%;
       max-width: 500px;
@@ -178,12 +179,12 @@
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Error: div en lugar de header -->
-  <div class="header">
-    <!-- Error: div en lugar de nav -->
-    <div class="nav">
+
+  <header>
+    <nav>
       <span class="logo">Chronicles of Code</span>
       <!-- Error: div en lugar de ul/li para lista de navegación -->
       <div class="nav-links">
@@ -192,11 +193,10 @@
         <a href="#habilidades">Habilidades</a>
         <a href="#desafio">Desafiar</a>
       </div>
-    </div>
-  </div>
+    </nav>
+  </header>
 
-  <!-- Error: div en lugar de main -->
-  <div class="main">
+  <main>
 
     <!-- Error: div en lugar de section -->
     <div class="hero" id="personaje">
@@ -336,18 +336,19 @@
       </form>
     </div>
 
-  </div><!-- /main -->
+  </main>
 
   <!-- Error: div en lugar de footer -->
-  <div class="footer">
+  <footer>
     <!-- Error: div en lugar de p -->
     <div>© 2025 Chronicles of Code — Todos los derechos reservados</div>
     <!-- Error: div en lugar de p -->
     <div>Zara Darkbane no se hace responsable por los daños causados en combate.</div>
-  </div>
+  </footer>
 
   <!-- El alumno debe crear script.js y vincularlo aquí -->
   <script src="script.js"></script>
 
 </body>
+
 </html>
