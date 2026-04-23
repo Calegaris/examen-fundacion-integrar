@@ -68,13 +68,11 @@ body {
     border-radius: 20px;
     font-size: 0.85rem;
     margin-top: 8px;
-    /* Error: texto de badge también con bajo contraste */
     color: var(--text-gray-3);
 }
 
 .section-title {
     font-size: 1.8rem;
-    /* Error: color de encabezado con bajo contraste */
     color: var(--text-gray-2);
     margin-bottom: 24px;
     border-bottom: 2px solid var(--primary-color);
@@ -155,7 +153,6 @@ body {
     background: var(--bg-dark-3);
 }
 
-/* Error: campos sin estilos accesibles, sin indicador de foco visible */
 input,
 select {
     display: block;
@@ -170,7 +167,13 @@ select {
     border-radius: 4px;
 }
 
-/* Error: botón de envío como div, no como button */
+input:focus,
+select:focus,
+.btn:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
 .btn {
     display: inline-block;
     padding: 10px 28px;
