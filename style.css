@@ -83,15 +83,16 @@ body {
     background: var(--bg-dark-3);
 }
 
-/* Error: grilla de stats con float en lugar de CSS Grid */
 .stats-grid {
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
 }
 
 .stat-card {
-    float: left;
-    width: 22%;
-    margin: 1.5%;
+    float: none;
+    width: auto;
+    margin: 0;
     background: var(--bg-dark-2);
     border: 1px solid var(--primary-color);
     padding: 20px;
