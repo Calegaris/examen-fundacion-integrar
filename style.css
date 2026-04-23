@@ -3,13 +3,17 @@
     --bg-dark-1: #1a1a2e;
     --bg-dark-2: #16213e;
     --bg-dark-3: #0f3460;
+
     --primary-color: #e94560;
-    --text-gray-1: #bbb;
-    --text-gray-2: #ccc;
-    --text-gray-3: #aaa;
-    --text-gray-4: #888;
-    --text-gray-5: #777;
-    --text-gray-6: #555;
+
+
+    --text-gray-1: #222;
+    --text-gray-2: #eee;
+    --text-gray-3: #fff;
+    --text-gray-4: #ccc;
+    --text-gray-5: #ccc;
+    --text-gray-6: #ddd;
+
     --white: #fff;
 }
 
