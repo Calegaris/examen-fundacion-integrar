@@ -1,206 +1,221 @@
- body {
-     font-family: Georgia, serif;
-     margin: 0;
-     /* Error: bajo contraste — texto gris claro sobre fondo casi blanco */
-     color: #bbb;
-     background: #f5f5f5;
- }
+:root {
+    --bg-light: #f5f5f5;
+    --bg-dark-1: #1a1a2e;
+    --bg-dark-2: #16213e;
+    --bg-dark-3: #0f3460;
+    --primary-color: #e94560;
+    --text-gray-1: #bbb;
+    --text-gray-2: #ccc;
+    --text-gray-3: #aaa;
+    --text-gray-4: #888;
+    --text-gray-5: #777;
+    --text-gray-6: #555;
+    --white: #fff;
+}
 
- .header {
-     background: #1a1a2e;
-     padding: 16px 40px;
-     border-bottom: 3px solid #e94560;
- }
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    /* Error: bajo contraste — texto gris claro sobre fondo casi blanco */
+    color: var(--text-gray-1);
+    background: var(--bg-light);
+}
 
- .logo {
-     color: #e94560;
-     font-size: 1.4rem;
-     font-weight: bold;
- }
+.header {
+    background: var(--bg-dark-1);
+    padding: 16px 40px;
+    border-bottom: 3px solid var(--primary-color);
+}
 
- /* Error: sin flexbox, navegación con display inline-block */
- .nav-links a {
-     display: inline-block;
-     margin-right: 20px;
-     text-decoration: none;
-     /* Error: muy bajo contraste sobre fondo oscuro */
-     color: #555;
- }
+.logo {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
 
- .hero {
-     padding: 60px 40px;
-     background: #16213e;
- }
+/* Error: sin flexbox, navegación con display inline-block */
+.nav-links a {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    /* Error: muy bajo contraste sobre fondo oscuro */
+    color: var(--text-gray-6);
+}
 
- .avatar {
-     width: 120px;
-     height: 120px;
-     border-radius: 50%;
-     border: 3px solid #e94560;
- }
+.hero {
+    padding: 60px 40px;
+    background: var(--bg-dark-2);
+}
 
- .class-badge {
-     display: inline-block;
-     background: #e94560;
-     padding: 4px 12px;
-     border-radius: 20px;
-     font-size: 0.85rem;
-     margin-top: 8px;
-     /* Error: texto de badge también con bajo contraste */
-     color: #aaa;
- }
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+}
 
- .section-title {
-     font-size: 1.8rem;
-     /* Error: color de encabezado con bajo contraste */
-     color: #ccc;
-     margin-bottom: 24px;
-     border-bottom: 2px solid #e94560;
-     padding-bottom: 8px;
- }
+.class-badge {
+    display: inline-block;
+    background: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    /* Error: texto de badge también con bajo contraste */
+    color: var(--text-gray-3);
+}
 
- .stats-section {
-     padding: 60px 40px;
-     background: #0f3460;
- }
+.section-title {
+    font-size: 1.8rem;
+    /* Error: color de encabezado con bajo contraste */
+    color: var(--text-gray-2);
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px;
+}
 
- /* Error: grilla de stats con float en lugar de CSS Grid */
- .stats-grid {
-     overflow: hidden;
- }
+.stats-section {
+    padding: 60px 40px;
+    background: var(--bg-dark-3);
+}
 
- .stat-card {
-     float: left;
-     width: 22%;
-     margin: 1.5%;
-     background: #16213e;
-     border: 1px solid #e94560;
-     padding: 20px;
-     text-align: center;
-     box-sizing: border-box;
-     border-radius: 8px;
- }
+/* Error: grilla de stats con float en lugar de CSS Grid */
+.stats-grid {
+    overflow: hidden;
+}
 
- .stat-value {
-     font-size: 2.5rem;
-     font-weight: bold;
-     color: #e94560;
- }
+.stat-card {
+    float: left;
+    width: 22%;
+    margin: 1.5%;
+    background: var(--bg-dark-2);
+    border: 1px solid var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
 
- .stat-label {
-     font-size: 0.85rem;
-     text-transform: uppercase;
-     letter-spacing: 1px;
-     /* Error: bajo contraste */
-     color: #888;
- }
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
 
- .skills-section {
-     padding: 60px 40px;
-     background: #1a1a2e;
- }
+.stat-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* Error: bajo contraste */
+    color: var(--text-gray-4);
+}
 
- .skill-card {
-     border: 1px solid #e94560;
-     border-radius: 8px;
-     padding: 16px 20px;
-     margin-bottom: 12px;
-     background: #16213e;
- }
+.skills-section {
+    padding: 60px 40px;
+    background: var(--bg-dark-1);
+}
 
- .skill-cost {
-     font-size: 0.8rem;
-     /* Error: bajo contraste */
-     color: #777;
-     margin-top: 4px;
- }
+.skill-card {
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    background: var(--bg-dark-2);
+}
 
- .tags {
-     margin-top: 8px;
- }
+.skill-cost {
+    font-size: 0.8rem;
+    /* Error: bajo contraste */
+    color: var(--text-gray-5);
+    margin-top: 4px;
+}
 
- .tag {
-     display: inline-block;
-     background: #e94560;
-     padding: 2px 8px;
-     font-size: 0.75rem;
-     border-radius: 4px;
-     margin-right: 4px;
-     color: #fff;
- }
+.tags {
+    margin-top: 8px;
+}
 
- .challenge-section {
-     padding: 60px 40px;
-     background: #0f3460;
- }
+.tag {
+    display: inline-block;
+    background: var(--primary-color);
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    margin-right: 4px;
+    color: var(--white);
+}
 
- /* Error: campos sin estilos accesibles, sin indicador de foco visible */
- input,
- select {
-     display: block;
-     width: 100%;
-     max-width: 500px;
-     padding: 10px;
-     margin-bottom: 14px;
-     border: 1px solid #e94560;
-     background: #16213e;
-     color: #bbb;
-     box-sizing: border-box;
-     border-radius: 4px;
- }
+.challenge-section {
+    padding: 60px 40px;
+    background: var(--bg-dark-3);
+}
 
- /* Error: botón de envío como div, no como button */
- .btn {
-     display: inline-block;
-     padding: 10px 28px;
-     background: #e94560;
-     color: #fff;
-     cursor: pointer;
-     border-radius: 4px;
-     font-size: 1rem;
- }
+/* Error: campos sin estilos accesibles, sin indicador de foco visible */
+input,
+select {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid var(--primary-color);
+    background: var(--bg-dark-2);
+    color: var(--text-gray-1);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
 
- .footer {
-     background: #1a1a2e;
-     color: #fff;
-     text-align: center;
-     padding: 20px;
-     border-top: 3px solid #e94560;
- }
+/* Error: botón de envío como div, no como button */
+.btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
 
- .hero-title {
-     font-size: 2.5rem;
-     font-weight: bold;
-     color: #e94560;
-     margin-top: 20px;
+.footer {
+    background: var(--bg-dark-1);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid var(--primary-color);
+}
 
- }
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 20px;
 
- .hero-bio {
-     margin-top: 16px;
-     max-width: 600px;
- }
+}
 
- .hero-meta {
-     margin-top: 20px;
- }
+.hero-bio {
+    margin-top: 16px;
+    max-width: 600px;
+}
 
- .hero-meta div {
-     margin-bottom: 6px;
- }
+.hero-meta {
+    margin-top: 20px;
+}
 
- .stat-card img {
-     width: 40px;
-     border-radius: 50%;
- }
+.hero-meta div {
+    margin-bottom: 6px;
+}
 
- .skill-name {
-     font-size: 1.1rem;
-     font-weight: bold;
-     color: #e94560;
- }
+.stat-card img {
+    width: 40px;
+    border-radius: 50%;
+}
 
- .challenge-intro {
-     margin-bottom: 24px;
-     max-width: 600px;
- }
+.skill-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.challenge-intro {
+    margin-bottom: 24px;
+    max-width: 600px;
+}
