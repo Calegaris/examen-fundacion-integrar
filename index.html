@@ -6,178 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zara Darkbane — Chronicles of Code</title>
 
-  <!-- Error: estilos embebidos en lugar de archivo externo -->
-  <style>
-    body {
-      font-family: Georgia, serif;
-      margin: 0;
-      /* Error: bajo contraste — texto gris claro sobre fondo casi blanco */
-      color: #bbb;
-      background: #f5f5f5;
-    }
 
-    .header {
-      background: #1a1a2e;
-      padding: 16px 40px;
-      border-bottom: 3px solid #e94560;
-    }
-
-    .logo {
-      color: #e94560;
-      font-size: 1.4rem;
-      font-weight: bold;
-    }
-
-    /* Error: sin flexbox, navegación con display inline-block */
-    .nav-links a {
-      display: inline-block;
-      margin-right: 20px;
-      text-decoration: none;
-      /* Error: muy bajo contraste sobre fondo oscuro */
-      color: #555;
-    }
-
-    .hero {
-      padding: 60px 40px;
-      background: #16213e;
-    }
-
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid #e94560;
-    }
-
-    .class-badge {
-      display: inline-block;
-      background: #e94560;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin-top: 8px;
-      /* Error: texto de badge también con bajo contraste */
-      color: #aaa;
-    }
-
-    .section-title {
-      font-size: 1.8rem;
-      /* Error: color de encabezado con bajo contraste */
-      color: #ccc;
-      margin-bottom: 24px;
-      border-bottom: 2px solid #e94560;
-      padding-bottom: 8px;
-    }
-
-    .stats-section {
-      padding: 60px 40px;
-      background: #0f3460;
-    }
-
-    /* Error: grilla de stats con float en lugar de CSS Grid */
-    .stats-grid {
-      overflow: hidden;
-    }
-
-    .stat-card {
-      float: left;
-      width: 22%;
-      margin: 1.5%;
-      background: #16213e;
-      border: 1px solid #e94560;
-      padding: 20px;
-      text-align: center;
-      box-sizing: border-box;
-      border-radius: 8px;
-    }
-
-    .stat-value {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #e94560;
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      /* Error: bajo contraste */
-      color: #888;
-    }
-
-    .skills-section {
-      padding: 60px 40px;
-      background: #1a1a2e;
-    }
-
-    .skill-card {
-      border: 1px solid #e94560;
-      border-radius: 8px;
-      padding: 16px 20px;
-      margin-bottom: 12px;
-      background: #16213e;
-    }
-
-    .skill-cost {
-      font-size: 0.8rem;
-      /* Error: bajo contraste */
-      color: #777;
-      margin-top: 4px;
-    }
-
-    .tags {
-      margin-top: 8px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #e94560;
-      padding: 2px 8px;
-      font-size: 0.75rem;
-      border-radius: 4px;
-      margin-right: 4px;
-      color: #fff;
-    }
-
-    .challenge-section {
-      padding: 60px 40px;
-      background: #0f3460;
-    }
-
-    /* Error: campos sin estilos accesibles, sin indicador de foco visible */
-    input,
-    select {
-      display: block;
-      width: 100%;
-      max-width: 500px;
-      padding: 10px;
-      margin-bottom: 14px;
-      border: 1px solid #e94560;
-      background: #16213e;
-      color: #bbb;
-      box-sizing: border-box;
-      border-radius: 4px;
-    }
-
-    /* Error: botón de envío como div, no como button */
-    .btn {
-      display: inline-block;
-      padding: 10px 28px;
-      background: #e94560;
-      color: #fff;
-      cursor: pointer;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-
-    .footer {
-      background: #1a1a2e;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      border-top: 3px solid #e94560;
-    }
-  </style>
 </head>
 
 <body>
@@ -202,24 +31,24 @@
       <img src="https://picsum.photos/seed/zara/120/120" class="avatar" alt="Retrato de Zara Darkbane">
 
       <div class="hero-text">
-        <h1 class="hero-title" style="font-size: 2.5rem; font-weight: bold; color: #e94560;">
+        <h1 class="hero-title">
           Zara Darkbane
         </h1>
 
         <p class="class-badge">Hechicera</p>
 
-        <p class="hero-bio" style="margin-top: 16px; max-width: 600px;">
+        <p class="hero-bio">
           Invocadora de los planos oscuros, Zara domina el arte de la destrucción arcana.
           Sus hechizos pueden desintegrar escudos mágicos y paralizar a los enemigos más poderosos.
           Busca rivales que se atrevan a desafiarla.
         </p>
 
-        <dl class="hero-meta" style="margin-top: 20px;">
-          <div style="margin-bottom: 6px;">
+        <dl class="hero-meta">
+          <div>
             <dt>Nivel:</dt>
             <dd>7</dd>
           </div>
-          <div style="margin-bottom: 6px;">
+          <div>
             <dt>Alineación:</dt>
             <dd>Neutral Maligna</dd>
           </div>
@@ -237,28 +66,25 @@
       <div class="stats-grid">
 
         <article class="stat-card">
-          <img src="https://picsum.photos/seed/heart/40/40" alt="Icono de vida"
-            style="width: 40px; border-radius: 50%;">
+          <img src="https://picsum.photos/seed/heart/40/40" alt="Icono de vida">
           <p class="stat-value">80</p>
           <p class="stat-label">Vida</p>
         </article>
 
         <article class="stat-card">
-          <img src="https://picsum.photos/seed/mana/40/40" alt="Icono de mana" style="width: 40px; border-radius: 50%;">
+          <img src="https://picsum.photos/seed/mana/40/40" alt="Icono de mana">
           <p class="stat-value">120</p>
           <p class="stat-label">Mana</p>
         </article>
 
         <article class="stat-card">
-          <img src="https://picsum.photos/seed/sword/40/40" alt="Icono de ataque"
-            style="width: 40px; border-radius: 50%;">
+          <img src="https://picsum.photos/seed/sword/40/40" alt="Icono de ataque">
           <p class="stat-value">45</p>
           <p class="stat-label">Ataque</p>
         </article>
 
         <article class="stat-card">
-          <img src="https://picsum.photos/seed/shield/40/40" alt="Icono de defensa"
-            style="width: 40px; border-radius: 50%;">
+          <img src="https://picsum.photos/seed/shield/40/40" alt="Icono de defensa">
           <p class="stat-value">30</p>
           <p class="stat-label">Defensa</p>
         </article>
@@ -271,7 +97,7 @@
       <h2 class="section-title">Habilidades</h2>
 
       <article class="skill-card">
-        <h3 class="skill-name" style="font-size: 1.1rem; font-weight: bold; color: #e94560;">
+        <h3 class="skill-name">
           Bola de Fuego
         </h3>
 
@@ -289,7 +115,7 @@
       </article>
 
       <article class="skill-card">
-        <h3 class="skill-name" style="font-size: 1.1rem; font-weight: bold; color: #e94560;">
+        <h3 class="skill-name">
           Escudo de Hielo
         </h3>
 
@@ -306,7 +132,7 @@
       </article>
 
       <article class="skill-card">
-        <h3 class="skill-name" style="font-size: 1.1rem; font-weight: bold; color: #e94560;">
+        <h3 class="skill-name">
           Rayo Carmesí
         </h3>
 
@@ -329,7 +155,7 @@
     <section class="challenge-section" id="desafio">
       <h2 class="section-title">¿Te animás a desafiarla?</h2>
 
-      <p class="challenge-intro" style="margin-bottom: 24px; max-width: 600px;">
+      <p class="challenge-intro">
         Registrá tu personaje para enfrentarte a Zara Darkbane en el próximo torneo.
         Solo los más valientes (o los más locos) se atreven.
       </p>
