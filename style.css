@@ -37,12 +37,15 @@ body {
     font-weight: bold;
 }
 
-/* Error: sin flexbox, navegación con display inline-block */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
 .nav-links a {
-    display: inline-block;
-    margin-right: 20px;
+    display: block;
     text-decoration: none;
-    /* Error: muy bajo contraste sobre fondo oscuro */
     color: var(--text-gray-6);
 }
 
@@ -111,7 +114,6 @@ body {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* Error: bajo contraste */
     color: var(--text-gray-4);
 }
 
@@ -130,7 +132,6 @@ body {
 
 .skill-cost {
     font-size: 0.8rem;
-    /* Error: bajo contraste */
     color: var(--text-gray-5);
     margin-top: 4px;
 }
