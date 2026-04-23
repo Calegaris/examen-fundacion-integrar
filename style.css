@@ -20,7 +20,6 @@
 body {
     font-family: Georgia, serif;
     margin: 0;
-    /* Error: bajo contraste — texto gris claro sobre fondo casi blanco */
     color: var(--text-gray-1);
     background: var(--bg-light);
 }
@@ -61,6 +60,15 @@ body {
     border: 3px solid var(--primary-color);
 }
 
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 20px;
+
+}
+
+
 .class-badge {
     display: inline-block;
     background: var(--primary-color);
@@ -69,6 +77,19 @@ body {
     font-size: 0.85rem;
     margin-top: 8px;
     color: var(--text-gray-3);
+}
+
+.hero-bio {
+    margin-top: 16px;
+    max-width: 600px;
+}
+
+.hero-meta {
+    margin-top: 20px;
+}
+
+.hero-meta div {
+    margin-bottom: 6px;
 }
 
 .section-title {
@@ -102,6 +123,11 @@ body {
     border-radius: 8px;
 }
 
+.stat-card img {
+    width: 40px;
+    border-radius: 50%;
+}
+
 .stat-value {
     font-size: 2.5rem;
     font-weight: bold;
@@ -128,6 +154,12 @@ body {
     background: var(--bg-dark-2);
 }
 
+.skill-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
 .skill-cost {
     font-size: 0.8rem;
     color: var(--text-gray-5);
@@ -152,6 +184,14 @@ body {
     padding: 60px 40px;
     background: var(--bg-dark-3);
 }
+
+
+
+.challenge-intro {
+    margin-bottom: 24px;
+    max-width: 600px;
+}
+
 
 input,
 select {
@@ -190,41 +230,4 @@ select:focus,
     text-align: center;
     padding: 20px;
     border-top: 3px solid var(--primary-color);
-}
-
-.hero-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-top: 20px;
-
-}
-
-.hero-bio {
-    margin-top: 16px;
-    max-width: 600px;
-}
-
-.hero-meta {
-    margin-top: 20px;
-}
-
-.hero-meta div {
-    margin-bottom: 6px;
-}
-
-.stat-card img {
-    width: 40px;
-    border-radius: 50%;
-}
-
-.skill-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.challenge-intro {
-    margin-bottom: 24px;
-    max-width: 600px;
 }
