@@ -13,7 +13,7 @@ Recibirás la ficha de un personaje de videojuego hecha con HTML malo. Tu tarea 
 ## Requisitos Técnicos
 
 ### 1. Git & GitHub (obligatorio para aprobar)
-- Hacer **fork** del repositorio template provisto por el docente (ya tiene la estructura base lista).
+- Clonar el repositorio template provisto (ya tiene la estructura base lista para trabajar).
 - Subir los cambios con **mínimo 4 commits** con mensajes descriptivos en inglés.
   - ❌ Incorrecto: `"entrega final"`, `"cambios"`, `"fix"`
   - ✅ Correcto: `"fix: replace divs with semantic HTML elements"`, `"feat: add CSS grid layout"`
