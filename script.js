@@ -17,7 +17,12 @@ const canCastSpell = (currentMana, spellCost, isStunned) => {
     return currentMana >= spellCost && !isStunned;
 };
 
-console.log(canCastSpell(120, 30, false));  // Esperado: true  (mana ok, no aturdido)
-console.log(canCastSpell(120, 30, true));   // Esperado: false (mana ok, pero aturdido)
-console.log(canCastSpell(10, 30, false));   // Esperado: false (mana insuficiente)
-console.log(canCastSpell(10, 30, true));    // Esperado: false (ambas condiciones fallan)
+
+function getPresentation(name, characterClass, level) {
+    return `${name} — ${characterClass} (Nivel ${level})`;
+}
+
+console.log(calculateDamage(attack, defense));
+console.log(isAlive(health));
+console.log(canCastSpell(mana, 30, false));
+console.log(getPresentation(name, characterClass, level));
