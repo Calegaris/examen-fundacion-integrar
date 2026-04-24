@@ -1,7 +1,7 @@
 # IA_HISTORY.md — Registro de Uso de IA
 
-**Alumno/a:** <!-- Tu nombre completo -->
-**Fecha:** <!-- Fecha del examen, ej: 21/04/2026 -->
+**Alumno/a:** Luis Angel Calegari
+**Fecha:** 23/04/2026
 
 ---
 
@@ -81,10 +81,10 @@ simultáneamente usando el atributo `inert` y reemplazando `display: none` por
 ### Lo que le pedí a la IA
 
 ```
-chat los cambios no funcionaron, el nav en desktop ahora no se puede seleccionar
+"chat los cambios no funcionaron, el nav en desktop ahora no se puede seleccionar
 y en mobile esta media abierta la hamburguesa, creo que se perdio el hilo y por
 las dudas voy a deshacer los cambios asi no nos desvirtuamos. planifiquemos de
-nuevo que vamos a hacer para resolver lo del tab en el nav
+nuevo que vamos a hacer para resolver lo del tab en el nav"
 ```
 
 ### Análisis del resultado obtenido
@@ -109,7 +109,8 @@ la versión anterior era completamente funcional, entonces decidí revertir todo
 los cambios y eliminar la rama en lugar de intentar parchear una solución que
 estaba generando más problemas de los que resolvía. Finalmente consultando con
 otro agente determinamos que el tab en realidad funcionaba correctamente y el
-problema era algo del "entorno de testing" que yo estaba usando. pero como no venia al caso decidí dejarlo asi y seguir con el resto del examen.
+problema era algo del navegador que yo estaba usando. pero como no venia al caso decidi dejarlo asi y seguir con el resto del examen.
+
 
 ```
 
