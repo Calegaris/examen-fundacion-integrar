@@ -13,6 +13,10 @@
     /* Textos secundarios y labels */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Georgia, serif;
     margin: 0;
