@@ -25,45 +25,42 @@
 ### Momento del proceso
 
 ```
-<!--
-  Indicá en qué punto del examen usaste este prompt.
-  No es sobre la hora exacta — es sobre el contexto: ¿qué estabas intentando resolver cuando recurriste a la IA?
-  Ej: "Cuando no sabía cómo estructurar el layout con Grid."
-  Ej: "Al terminar el HTML, para verificar si me faltaba algo de accesibilidad."
-  Ej: "Al principio del ejercicio de JS, para entender cómo arrancar."
--->
+Durante la etapa de resolver la parte de JavaScript, cuando la IA me propuso declarar las variables
+con los valores del personaje. Me di cuenta que los valores estaban escritos directamente
+en el código y ahí me pregunté si eso era lo correcto o si debían extraerse del HTML.
 ```
 
 ### Lo que le pedí a la IA
 
 ```
-<!-- Pegá aquí el prompt exacto que escribiste. Debe ser el texto que vos escribiste, no la respuesta. -->
+"pero estas estadisticas no deberiamos sacarlas del html? o sea en el html estan
+hardcodeadas, que analisis haces para declararlas asi en js? hay alguna parte del
+examen que te lo indica?"
 ```
 
 ### Análisis del resultado obtenido
 
 ```
-<!--
-  Describí con tus propias palabras qué generó la IA. No copies el código ni la respuesta — analizála.
-  Mínimo 3 oraciones. Respondé:
-  - ¿Qué enfoque tomó la IA para resolver el problema?
-  - ¿El resultado era lo que esperabas? ¿Por qué sí o por qué no?
-  - ¿Qué parte te resultó útil como punto de partida?
--->
+La IA declaró las variables con valores hardcodeados en lugar de usar
+`document.querySelector` para extraerlos del DOM. En un primer momento asumí
+que esto podría ser un error porque los mismos valores ya estaban en el HTML,
+y me pareció redundante declararlos dos veces. La IA justificó su enfoque
+señalando que la consigna pedía explícitamente declarar variables en JS sin
+ninguna referencia al DOM, y que era una separación intencional de
+responsabilidades: el HTML maneja la presentación visual y el JS los datos
+para la lógica de juego.
 ```
 
 ### Qué debí corregir manualmente y por qué
 
 ```
-<!--
-  Esta sección es la más importante. Sé específico/a. Mínimo 3 oraciones.
-  Respondé:
-  - ¿Qué error concreto tenía el resultado? (semántico, de accesibilidad, lógico, de estilo, etc.)
-  - ¿Cómo lo detectaste? (al probarlo en el browser, al leer el código, al ver la consola...)
-  - ¿Por qué estaba técnicamente incorrecto o insuficiente?
-  - ¿Qué cambiaste exactamente para que funcionara bien?
-  Si no corregiste nada, explicá por qué el resultado era correcto tal como estaba.
--->
+Fui a releer la consigna y confirmé que efectivamente pedía declarar las stats
+como variables independientes en JS, sin ninguna mención a extraerlas del HTML.
+El código de la IA era correcto, pero mi intervención fue necesaria para
+validarlo — sin ese análisis crítico podría haber reescrito las variables
+innecesariamente usando querySelector y generado un acoplamiento entre el HTML
+y el JS que la consigna no pedía y podía haber complejizado todo innecesariamente. Lo que corregí no fue el código sino mi
+propia interpretación inicial, que fue el resultado más valioso del intercambio.
 ```
 
 ---
@@ -73,45 +70,47 @@
 ### Momento del proceso
 
 ```
-<!--
-  Indicá en qué punto del examen usaste este prompt.
-  No es sobre la hora exacta — es sobre el contexto: ¿qué estabas intentando resolver cuando recurriste a la IA?
-  Ej: "Cuando no sabía cómo estructurar el layout con Grid."
-  Ej: "Al terminar el HTML, para verificar si me faltaba algo de accesibilidad."
-  Ej: "Al principio del ejercicio de JS, para entender cómo arrancar."
--->
+Durante la mejora del navbar que quise hacer despues de terminar el mvp digamos, cuando detecté que al tabular en desktop los
+links del nav eran salteados. Le pedí a la IA que resolviera el problema de
+accesibilidad y propuso una solución que combinaba cambios en HTML, CSS y JS
+simultáneamente usando el atributo `inert` y reemplazando `display: none` por
+`max-height` para las transiciones en mobile.
+
 ```
 
 ### Lo que le pedí a la IA
 
 ```
-<!-- Pegá aquí el prompt exacto que escribiste. Debe ser el texto que vos escribiste, no la respuesta. -->
+chat los cambios no funcionaron, el nav en desktop ahora no se puede seleccionar
+y en mobile esta media abierta la hamburguesa, creo que se perdio el hilo y por
+las dudas voy a deshacer los cambios asi no nos desvirtuamos. planifiquemos de
+nuevo que vamos a hacer para resolver lo del tab en el nav
 ```
 
 ### Análisis del resultado obtenido
 
 ```
-<!--
-  Describí con tus propias palabras qué generó la IA. No copies el código ni la respuesta — analizála.
-  Mínimo 3 oraciones. Respondé:
-  - ¿Qué enfoque tomó la IA para resolver el problema?
-  - ¿El resultado era lo que esperabas? ¿Por qué sí o por qué no?
-  - ¿Qué parte te resultó útil como punto de partida?
--->
+La IA propuso una solución técnicamente válida en teoría — usar `inert` para
+bloquear el foco en mobile cuando el menú está cerrado y `max-height` para
+permitir transiciones CSS que `display: none` no permite. Sin embargo al
+aplicar los cambios el resultado fue que en desktop los links dejaron de ser
+focuseables y en mobile el menú quedó parcialmente abierto. La solución tocaba
+demasiadas capas al mismo tiempo sin un diagnóstico claro del problema real,
+lo que generó regresiones en funcionalidad que antes estaba correcta.
 ```
 
 ### Qué debí corregir manualmente y por qué
 
 ```
-<!--
-  Esta sección es la más importante. Sé específico/a. Mínimo 3 oraciones.
-  Respondé:
-  - ¿Qué error concreto tenía el resultado? (semántico, de accesibilidad, lógico, de estilo, etc.)
-  - ¿Cómo lo detectaste? (al probarlo en el browser, al leer el código, al ver la consola...)
-  - ¿Por qué estaba técnicamente incorrecto o insuficiente?
-  - ¿Qué cambiaste exactamente para que funcionara bien?
-  Si no corregiste nada, explicá por qué el resultado era correcto tal como estaba.
--->
+Detecté los errores inmediatamente usando el live server que tenía corriendo
+durante todo el desarrollo, y confirmé el problema swicheando entre desktop y
+modo mobile en DevTools. Como llevaba un control estricto de ramas y commits,
+la versión anterior era completamente funcional, entonces decidí revertir todos
+los cambios y eliminar la rama en lugar de intentar parchear una solución que
+estaba generando más problemas de los que resolvía. Finalmente consultando con
+otro agente determinamos que el tab en realidad funcionaba correctamente y el
+problema era algo del navegador que yo estaba usando. pero como no venia al caso decidi dejarlo asi y seguir con el resto del examen.
+
 ```
 
 ---
@@ -119,10 +118,16 @@
 ## Reflexión final
 
 ```
-<!--
-  Mínimo 3 oraciones. Respondé:
-  - ¿Qué tipo de errores repitió la IA que tuviste que corregir?
-  - ¿Hubo algo que la IA resolvió bien a la primera sin que necesitaras tocarlo?
-  - ¿Cambiarías la forma en que le pedís cosas a la IA la próxima vez? ¿Por qué?
--->
+
+La IA fue útil como punto de partida y para avanzar rápido en partes donde la
+estructura era clara, pero tendió a proponer soluciones que tocaban múltiples
+capas simultáneamente sin validar cada paso por separado. El error más
+repetido fue asumir que el problema estaba en el código cuando en realidad
+era un problema del entorno de testing. Hubo cosas que la IA resolvió muy
+bien a la primera, como la lógica de las funciones JS, el layout flex del
+hero y el sistema de mensajes dinámicos del formulario según el nivel del
+personaje. La próxima vez le pediría que hiciera cambios más pequeños y
+verificables antes de combinar modificaciones en HTML, CSS y JS al mismo
+tiempo, porque cuando algo falla en un cambio múltiple es difícil aislar
+cuál de las partes generó el error.
 ```
