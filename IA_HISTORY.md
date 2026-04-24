@@ -109,7 +109,7 @@ la versión anterior era completamente funcional, entonces decidí revertir todo
 los cambios y eliminar la rama en lugar de intentar parchear una solución que
 estaba generando más problemas de los que resolvía. Finalmente consultando con
 otro agente determinamos que el tab en realidad funcionaba correctamente y el
-problema era algo del navegador que yo estaba usando. pero como no venia al caso decidi dejarlo asi y seguir con el resto del examen.
+problema era algo del "entorno de testing" que yo estaba usando. pero como no venia al caso decidí dejarlo asi y seguir con el resto del examen.
 
 ```
 
@@ -118,7 +118,6 @@ problema era algo del navegador que yo estaba usando. pero como no venia al caso
 ## Reflexión final
 
 ```
-
 La IA fue útil como punto de partida y para avanzar rápido en partes donde la
 estructura era clara, pero tendió a proponer soluciones que tocaban múltiples
 capas simultáneamente sin validar cada paso por separado. El error más
