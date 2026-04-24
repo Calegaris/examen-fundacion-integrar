@@ -63,3 +63,40 @@ links.forEach((link) => {
         navToggle.setAttribute("aria-expanded", false);
     });
 });
+
+
+// ── CHALLENGE FORM ──
+const challengeForm = document.getElementById("challenge-form");
+const resultCard = document.getElementById("result-card");
+const resultName = document.getElementById("result-name");
+const resultMessage = document.getElementById("result-message");
+const cancelBtn = document.getElementById("cancel-btn");
+
+const zaraMessages = {
+    "1": "Zara suspira. '¿Nivel 1? ¿Te perdiste camino a la guardería o viniste directo al torneo?'",
+
+    "4": "Zara sonríe de lado. 'Bueno... al menos sabés sostener un arma. Ya es más de lo que esperaba.'",
+
+    "7": "Zara asiente lentamente. 'Interesante... alguien que no muere en el tutorial. Esto podría durar más de 5 minutos.'",
+
+    "10": "Zara ríe suavemente. 'Al fin alguien serio. Perfecto... me estaba aburriendo de ganar sin esfuerzo.'"
+};
+
+challengeForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("challenger-name").value.trim();
+    const characterClass = document.getElementById("challenger-class").value.trim();
+    const level = document.getElementById("challenger-level").value;
+
+    resultName.textContent = `⚔️ ${name} — ${characterClass}`;
+    resultMessage.textContent = zaraMessages[level];
+
+    resultCard.classList.add("visible");
+    resultCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+});
+
+cancelBtn.addEventListener("click", () => {
+    resultCard.classList.remove("visible");
+    challengeForm.reset();
+});
