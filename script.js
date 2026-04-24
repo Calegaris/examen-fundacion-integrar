@@ -13,8 +13,11 @@ function calculateDamage(attack, defense) {
 
 const isAlive = (health) => health > 0;
 
-console.log(calculateDamage(45, 30)); // Esperado: 15
-console.log(calculateDamage(10, 50)); // Esperado: 0
-console.log(isAlive(80));             // Esperado: true
-console.log(isAlive(0));              // Esperado: false
-console.log(isAlive(-10));            // Esperado: false
+const canCastSpell = (currentMana, spellCost, isStunned) => {
+    return currentMana >= spellCost && !isStunned;
+};
+
+console.log(canCastSpell(120, 30, false));  // Esperado: true  (mana ok, no aturdido)
+console.log(canCastSpell(120, 30, true));   // Esperado: false (mana ok, pero aturdido)
+console.log(canCastSpell(10, 30, false));   // Esperado: false (mana insuficiente)
+console.log(canCastSpell(10, 30, true));    // Esperado: false (ambas condiciones fallan)
