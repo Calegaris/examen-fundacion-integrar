@@ -13,6 +13,10 @@
     /* Textos secundarios y labels */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Georgia, serif;
     margin: 0;
@@ -20,10 +24,20 @@ body {
     background: var(--bg-dark-1);
 }
 
-.header {
+/* ── NAVBAR ── */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     background: var(--bg-dark-1);
-    padding: 16px 40px;
     border-bottom: 3px solid var(--primary-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
 }
 
 .logo {
@@ -36,24 +50,71 @@ body {
     display: flex;
     gap: 20px;
     align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
-    display: block;
     text-decoration: none;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
     color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 16px 20px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        width: 100%;
+        padding: 16px 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
 }
 
 .hero {
     padding: 60px 40px;
     background: var(--bg-dark-1);
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .avatar {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     border: 3px solid var(--primary-color);
+    flex-shrink: 0;
 }
 
 .hero-title {
@@ -64,6 +125,18 @@ body {
 
 }
 
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        margin-top: 0;
+    }
+}
 
 .class-badge {
     display: inline-block;
@@ -117,10 +190,18 @@ body {
     text-align: center;
     box-sizing: border-box;
     border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(214, 43, 77, 0.3);
 }
 
 .stat-card img {
-    width: 40px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
 }
 
@@ -179,15 +260,76 @@ body {
 .challenge-section {
     padding: 60px 40px;
     background: var(--bg-dark-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
-
-
 
 .challenge-intro {
     margin-bottom: 24px;
     max-width: 600px;
 }
 
+#challenge-form {
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.result-card {
+    margin-top: 24px;
+    width: 100%;
+    max-width: 500px;
+    background: var(--bg-dark-1);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px 24px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.result-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.result-card .result-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.result-card .result-message {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.result-card .result-confirm {
+    font-size: 0.85rem;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.btn-cancel {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-cancel:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
 
 input,
 select {
